@@ -6,16 +6,19 @@ class MainPage {
         this.aboutString = '<p>/* ---</p>' +
                            '<p>Creating things, solving problems.</p>' +
                            '<p>Doing good job .......... compatible ✔</p>' +
-                           '<p>Get started with following links.</p>' +
-                           '<p>--- */</p>'
+                           '<p>Get started with following links.</p>'
+        this.aboutStringCloser = '<p>--- */</p>';
     }
 
     init() {
         let aboutSection = document.createElement('div')
-        aboutSection.style.cssText = 'font-size: 19px;line-height: 28px;color: green;letter-spacing: 2px;padding: 0 0 28px 0;font-family: "Inconsolata", Andale Mono, Monaco, Monospace;max-width:600px'
-        aboutSection.innerHTML = this.aboutString
+        this.app.style.cssText = 'font-size: 19px;line-height: 28px;color: green;letter-spacing: 2px;padding: 0 0 28px 0;font-family: "Inconsolata", Andale Mono, Monaco, Monospace;max-width:600px'
+        this.app.innerHTML = this.aboutString
         this.app.append(aboutSection)
+        this.app.innerHTML += '<br>'
         this.setLinks()
+        this.app.innerHTML += '<br><br>'
+        this.app.innerHTML += this.aboutStringCloser
     }
 
     setLinks() {
