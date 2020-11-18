@@ -2,6 +2,8 @@
 
 class MainPage {
     constructor() {
+        this.html = document.html
+        this.body = document.body
         this.app = document.getElementById('app')
         this.aboutString = '<p>/* ---</p>' +
                            '<p>Creating things, solving problems.</p>' +
@@ -12,7 +14,9 @@ class MainPage {
 
     init() {
         let aboutSection = document.createElement('div')
-        this.app.style.cssText = 'font-size: 19px;line-height: 28px;color: green;letter-spacing: 2px;padding: 0 0 28px 0;font-family: "Inconsolata", Andale Mono, Monaco, Monospace;max-width:600px'
+        this.html.style = 'height: 100%;'
+        this.app.style.cssText = 'height:auto;font-size: 19px;line-height: 28px;color: green;letter-spacing: 2px;padding: 0 0 28px 0;font-family: "Inconsolata", Andale Mono, Monaco, Monospace;max-width:600px'
+        this.body.style = 'display: flex;height: 100%;overflow: hidden;justify-content: center;align-items: center;'
         this.app.innerHTML = this.aboutString
         this.app.append(aboutSection)
         this.app.innerHTML += '<br>'
