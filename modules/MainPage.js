@@ -2,7 +2,7 @@
 
 class MainPage {
     constructor() {
-        this.html = document.html
+        this.html = document.getElementById('html')
         this.body = document.body
         this.app = document.getElementById('app')
         this.aboutString = '<p>/* ---</p>' +
